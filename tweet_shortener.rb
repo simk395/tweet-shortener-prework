@@ -17,6 +17,9 @@ def dictionary
 end
 
 def word_substituter(string)
-  i = dictionary.keys
-  j = string.split(" ")
+  dictionary.each do |word, abbr|
+    binding.pry
+  end
 end
+
+word_substituter
