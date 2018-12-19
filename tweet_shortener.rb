@@ -62,19 +62,19 @@ end
 
 def shortened_tweet_truncator(string)
   i, j, k = string.split(" "), 0, ""
-  if  string.split("").size > 140
+  if string.split("").size > 140
     i.each do |word|
       if dictionary.has_key?(word)
         i[j] = dictionary[word]
-      end
+      end#if
       j+=1
-    end
+    end#i
+    i = i.join(" ")
     if i.split("").size > 140
-      i = i.join(" ")
-      return "#{i[0..139]} ..."
-    end
-    i.join(" ")
+      return "#{i[0..139]}..."
+    end#if
+    return i
   else
     return string
-  end
-end
+  end#IF
+end#dEf
