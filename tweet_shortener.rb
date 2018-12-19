@@ -44,3 +44,16 @@ def bulk_tweet_shortener(array)
     j = 0
   end#array
 end
+
+def selective_tweet_shortener(string)
+  i, j = string.split(" "), 0
+  if string.split("").size < 140
+    i.each do |word|
+      if dictionary.has_key?(word)
+        i[j] = dictionary[word]
+      end
+      j+=1
+    end
+    i.join(" ")
+  end
+end
