@@ -20,8 +20,13 @@ def dictionary
 end
 
 def word_substituter(string)
-  dictionary.each do |word, abbr|
-    binding.pry
+  i = string.split(" ")
+  j = 0
+  i.each do |word|
+    if dictionary.has_key?(word)
+      i[j] = dictionary[word]
+    end
+    j+=1
   end
 end
 
