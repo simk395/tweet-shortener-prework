@@ -20,8 +20,7 @@ def dictionary
 end
 
 def word_substituter(string)
-  i = string.split(" ")
-  j = 0
+  i, j = string.split(" "), 0
   i.each do |word|
     if dictionary.has_key?(word)
       i[j] = dictionary[word]
@@ -32,9 +31,9 @@ def word_substituter(string)
 end
 
 def bulk_tweet_shortener(array)
-  i,j, l = "", 0, 0
-  while l < array.size
-    i = array[l].split(" ")
+  i,j = "", 0
+  array.each do |sentence|
+    i = sentence.split(" ")
     i.each do |word|
       if dictionary.has_key?(word.downcase)
         i[j] = dictionary[word]
@@ -43,6 +42,5 @@ def bulk_tweet_shortener(array)
     end#i
     puts i.join(" ")
     j = 0
-    l += 1
-  end#while
+  end#array
 end
