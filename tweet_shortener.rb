@@ -71,7 +71,7 @@ def shortened_tweet_truncator(string)
     end
     if i.split("").size > 140
       i = i.join(" ")
-      return "#{i[0..139] ...}"
+      return "#{i[0..139]} ..."
     end
     i.join(" ")
   else
