@@ -55,5 +55,7 @@ def selective_tweet_shortener(string)
       j+=1
     end
     i.join(" ")
+  else
+    return string
   end
 end
