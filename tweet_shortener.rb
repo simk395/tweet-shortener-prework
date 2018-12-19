@@ -3,13 +3,20 @@ require "pry"
 def dictionary
   dic = {
     "hello" => "hi",
-    ("to", "two", "too") => "2",
+    "to" => "2",
+    "two" => "2",
+    "too" => "2",
+    "for" => "4",
+    "four" => "4",
     "be" => "b",
     "you" => "u",
     "at" => "@",
     "and" => "&",
   }
-  binding.pry
+
 end
 
-dictionary
+def word_substituter(string)
+  i = dictionary.keys
+  j = string.split(" ")
+end
