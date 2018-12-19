@@ -29,5 +29,3 @@ def word_substituter(string)
     j+=1
   end
 end
-
-word_substituter(s)
