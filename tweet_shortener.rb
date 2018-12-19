@@ -33,7 +33,7 @@ end
 
 def bulk_tweet_shortener(array)
   i,j, l = "", 0, 0
-  while j < array.size
+  while l < array.size
     i = array[l].split(" ")
     i.each do |word|
       if dictionary.has_key?(word)
