@@ -47,5 +47,3 @@ def bulk_tweet_shortener(array)
     puts i
   end#array
 end#def
-
-bulk_tweet_shortener(s)
