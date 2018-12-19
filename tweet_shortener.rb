@@ -43,7 +43,7 @@ def bulk_tweet_shortener(array)
       end#if
       j+=1
     end#i
-    i.join(" ")
+    i = i.join(" ")
     puts i
   end#array
 end#def
