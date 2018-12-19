@@ -46,8 +46,8 @@ def bulk_tweet_shortener(array)
 end
 
 def selective_tweet_shortener(string)
-  i, j = string.split(" "), 0
-  if string.size.split("") < 140
+  i, j, k = string.split(" "), 0, string.split("")
+  if  k.size < 140
     i.each do |word|
       if dictionary.has_key?(word)
         i[j] = dictionary[word]
