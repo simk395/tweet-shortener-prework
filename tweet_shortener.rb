@@ -1,9 +1,7 @@
 # Write your code here.
 require "pry"
 
-s = [
-  "Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!",
-  "OMG you guys, you won't believe how sweet my kitten is. My kitten is like super cuddly and too cute to be believed right?"]
+s = "Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
 
 def dictionary
   dic = {
@@ -34,16 +32,17 @@ def word_substituter(string)
 end
 
 def bulk_tweet_shortener(array)
-  i, j = [], 0
-  array.each do |sentence|
-    i = sentence.split(" ")
+  i,j, l = "", 0, 0
+  while l < array.size
+    i = array[l].split(" ")
     i.each do |word|
       if dictionary.has_key?(word)
         i[j] = dictionary[word]
       end#if
       j+=1
     end#i
-    i = i.join(" ")
-    puts i
-  end#array
-end#def
+    puts i.join(" ")
+    j = 0
+    l += 1
+  end#while
+end
