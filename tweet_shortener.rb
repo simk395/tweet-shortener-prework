@@ -36,16 +36,16 @@ end
 def bulk_tweet_shortener(array)
   i, j = [], 0
   array.each do |sentence|
-    binding.pry
     i = sentence.split(" ")
     i.each do |word|
       if dictionary.has_key?(word)
         i[j] = dictionary[word]
-      end
+      end#if
       j+=1
-    end
-    puts i.join(" ")
-  end
-end
+    end#i
+    i.join(" ")
+    puts i
+  end#array
+end#def
 
 bulk_tweet_shortener(s)
