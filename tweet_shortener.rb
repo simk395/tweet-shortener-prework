@@ -34,6 +34,7 @@ end
 def bulk_tweet_shortener(array)
   i, j = [], 0
   array.each do |sentence|
+    binding.pry
     i = sentence.split(" ")
     i.each do |word|
       if dictionary.has_key?(word)
